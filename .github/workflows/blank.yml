@@ -29,8 +29,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - rin: pwd
-      - run: ls -al
 
       # Setup PHP 8.2
       - name: Setup PHP
@@ -44,3 +42,16 @@ jobs:
           php -v,
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      # AWS 인증하기
+      - name: AWS 인증
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
+      # AWS 인증이 완료되었는지 테스트합니다.
+      - name: AWS Lightsail에 연결되었는지 확인
+        run: aws configure list
+      
