@@ -62,7 +62,7 @@ jobs:
           host: ${{ secrets.LIGHTSAIL_HOST }}
           username: ${{env.LIGHTSAIL_USERNAME}}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
-          port: ${{ secrets.LIGHTSAIL_SSH_PORT }}
+          port: ${{ secrets.LIGHTSAIL_HTTPS_PORT }}
           source: '*'
           strip_components: 1
           target: '/home/gnit'
