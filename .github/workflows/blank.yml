@@ -28,11 +28,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      
-      # Checkout Test
-      - name : Checkout Test
       - run: ls -al
+      - uses: actions/checkout@v3
       - run: cat .github/workflows/checkout.yml
 
       # Setup PHP 8.2
