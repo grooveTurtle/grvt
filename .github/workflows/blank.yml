@@ -29,6 +29,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
+      # Checkout Test
+      - name : Checkout Test
+      - run: ls -al
+      - run: cat .github/workflows/checkout.yml
 
       # Setup PHP 8.2
       - name: Setup PHP
