@@ -63,7 +63,7 @@ jobs:
           username: ${{env.LIGHTSAIL_USERNAME}}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           port: ${{ secrets.LIGHTSAIL_HTTPS_PORT }}
-          source: '*'
+          source: '~/*'
           strip_components: 1
           target: '/home/grvt'
 
