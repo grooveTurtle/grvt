@@ -65,7 +65,7 @@ jobs:
           port: ${{ secrets.LIGHTSAIL_HTTPS_PORT }}
           source: '*'
           strip_components: 1
-          target: '/home/gnit'
+          target: '/home/grvt'
 
       
       
