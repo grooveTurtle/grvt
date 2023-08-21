@@ -29,7 +29,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - run: ls -al
+      - run: pwd
 
       # Setup PHP 8.2
       # - name: Setup PHP
