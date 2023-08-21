@@ -66,3 +66,14 @@ jobs:
           source: ${{ github.workspace }}
           strip_components: 1
           target: ${{ secrets.GRVT_DEPLOY_PATH }}
+
+      - name: action-slack
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          author_name: www-be
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+          # if_mention: failure,cancelled
+        env:
+           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_INCOMING_WEBHOOK }} # required
+        if: always() # Pick up events even if the job fails or is canceled.
