@@ -43,10 +43,6 @@ jobs:
           php -v,
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "${{ env.LIGHTSAIL_SSH_KEY }}"
-          echo "${{ env.LIGHTSAIL_HOST }}"
-          echo "${{ env.LIGHTSAIL_USERNAME }}"
-          echo "${{ env.AWS_REGION }}"
 
       # AWS 인증하기
       - name: AWS 인증
@@ -67,7 +63,6 @@ jobs:
           host: ${{ secrets.LIGHTSAIL_HOST }}
           username: ${{env.LIGHTSAIL_USERNAME}}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
-          port: ${{ secrets.LIGHTSAIL_HTTPS_PORT }}
           source: './*'
           strip_components: 1
           target: '/home/grvt'
