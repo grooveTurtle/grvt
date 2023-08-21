@@ -63,7 +63,7 @@ jobs:
           host: ${{ secrets.LIGHTSAIL_HOST }}
           username: ${{env.LIGHTSAIL_USERNAME}}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
-          source: '/home/runner/work/grvt'
+          source: '/home/runner/work/grvt/grvt/workspace'
           strip_components: 1
           target: ${{ secrets.GRVT_DEPLOY_PATH }}
 
