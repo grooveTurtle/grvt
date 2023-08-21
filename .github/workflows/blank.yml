@@ -43,10 +43,10 @@ jobs:
           php -v,
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo 1: "${{ env.LIGHTSAIL_SSH_KEY }}"
-          echo 2: "${{ env.LIGHTSAIL_HOST }}"
-          echo 3: "${{ env.LIGHTSAIL_USERNAME }}"
-          echo 4: "${{ env.AWS_REGION }}"
+          echo "${{ env.LIGHTSAIL_SSH_KEY }}"
+          echo "${{ env.LIGHTSAIL_HOST }}"
+          echo "${{ env.LIGHTSAIL_USERNAME }}"
+          echo "${{ env.AWS_REGION }}"
 
       # AWS 인증하기
       - name: AWS 인증
