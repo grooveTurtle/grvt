@@ -1,3 +1,3 @@
 <?php
 
-    print_r('git-actions test');
+    print_r('git-actions test2');
