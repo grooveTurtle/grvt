@@ -29,7 +29,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - run: echo ${{ github.workspace }}
+      - run: | 
+          pwd,
+          echo ${{ github.workspace }}
 
       # Setup PHP 8.2
       # - name: Setup PHP
